@@ -1,0 +1,36 @@
+<ion-navbar *navbar saumon>
+    <button menuToggle primary>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <p text-center>
+      <img text-center src="img/logo.png" style="max-height: 55px; padding: 5px;">
+    </p>
+</ion-navbar>
+
+<ion-content padding class="boutique">
+
+  <ion-list [hidden]="!response">
+
+    <ion-list-header text-center>
+      <h2 style="color:#f97352; font-size: 1.5em;" text-uppercase>Produits diponibles</h2>
+    </ion-list-header>
+
+    <button ion-item
+      style="margin: 3px"
+      *ngFor="let produit of response"
+      [hidden]="!produit.purchasable"
+      (click)="itemTapped($event, produit)">
+
+      <ion-avatar item-left class="divImg">
+        <img class="centered" src="{{produit.images[0].src}}"/>
+      </ion-avatar>
+
+      <p>{{produit.name}}</p>
+
+      <div item-right>
+        <b style="color:#f97352;">{{produit.price}} €</b>
+      </div>
+    </button>
+
+  </ion-list>
+</ion-content>

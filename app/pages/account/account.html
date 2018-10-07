@@ -1,0 +1,38 @@
+<ion-navbar *navbar saumon>
+    <button menuToggle primary>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <p text-center>
+      <img text-center src="img/logo.png" style="max-height: 55px; padding: 5px;">
+    </p>
+</ion-navbar>
+
+<ion-content padding class="account">
+
+    <form>
+      <ion-list padding>
+
+        <ion-list-header>
+          <h2 text-uppercase text-center secondary style="font-size: 1.2em;">Connexion</h2>
+        </ion-list-header>
+
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Mot de passe</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <button primary style="left: 67%;">Connexion</button>
+    </form>
+
+    <br />
+    <h2 text-uppercase text-center secondary style="font-size: 1.2em;">Pas encore de compte?</h2>
+    <div style="width: 50%; margin: 0 auto">
+      <button block (click)="goRegister()">S'enregistrer</button>
+    </div>
+</ion-content>

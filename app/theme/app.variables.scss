@@ -1,0 +1,22 @@
+@import "globals.core";
+
+$colors: (
+  primary:    #42291c,
+  secondary:  #f97352,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B,
+  saumon:     #fae1dd
+);
+
+$menu-width: 250px;
+
+$titre: (
+  color: secondary,
+  font-size: 1.5em,
+  text-align: center,
+  text-transform: uppercase
+);
+
+$background-color: #f7f3e3;

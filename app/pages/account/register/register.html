@@ -1,0 +1,63 @@
+<ion-navbar *navbar saumon>
+    <button menuToggle primary>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <p text-center>
+      <img text-center src="img/logo.png" style="max-height: 55px; padding: 5px;">
+    </p>
+</ion-navbar>
+
+<ion-content padding class="register">
+
+    <form [ngFormModel]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+      <ion-list>
+        <ion-list-header>
+          <h3 text-center bluegray>Enregistrement</h3>
+        </ion-list-header>
+
+        <!-- Last name -->
+        <ion-item>
+          <ion-label>*Nom</ion-label>
+          <ion-input [ngFormControl]="last_name" type="text" value=""></ion-input>
+        </ion-item>
+        <!-- First name not required-->
+        <ion-item>
+          <ion-label>Prénom</ion-label>
+          <ion-input [ngFormControl]="first_name" type="text" value=""></ion-input>
+        </ion-item>
+        <!-- Email -->
+        <ion-item>
+          <ion-label>
+            *Email</ion-label>
+          <ion-input [ngFormControl]="email" type="email" value=""></ion-input>
+        </ion-item>
+        <!-- Phone -->
+        <ion-item>
+          <ion-label>*Téléphone</ion-label>
+          <ion-input [ngFormControl]="phone" type="text" value=""></ion-input>
+        </ion-item>
+        <!-- Address -->
+        <ion-item>
+          <ion-label>*Adresse</ion-label>
+          <ion-input [ngFormControl]="address_1" type="text" value=""></ion-input>
+        </ion-item>
+        <!-- Postcode -->
+        <ion-item>
+          <ion-label>*Code Postal</ion-label>
+          <ion-input [ngFormControl]="postcode" type="text" value=""></ion-input>
+        </ion-item>
+        <!-- City -->
+        <ion-item>
+          <ion-label>*Ville</ion-label>
+          <ion-input [ngFormControl]="city" type="text" value=""></ion-input>
+        </ion-item>
+
+        <p>
+          <em secondary>* : champs obligatoires</em>
+        </p>
+        <div>
+          <button block type="submit" [disabled]="!registerForm.valid">VALIDER</button>
+        </div>
+      </ion-list>
+    </form>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-navbar *navbar saumon>
+    <button menuToggle primary>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <p text-center>
+      <img text-center src="img/logo.png" style="max-height: 55px; padding: 5px;">
+    </p>
+</ion-navbar>
+
+<ion-content padding class="concept">
+  <br />
+  <h2 text-uppercase text-center secondary style="font-size: 1.2em;">
+    COMMENT ÇA MARCHE ?</h2>
+
+  <div text-justify padding>
+    <p>
+      Vous connaissez le principe des paniers de maraîchers pour lesquels on s’abonne en ligne et on récupère régulièrement son panier de fruits et légumes de saison ?
+    </p>
+    <p>
+      Et bien là, c’est pareil avec des chocolats et dans la région Strasbourgeoise ! Vous passez commande du lundi au dimanche sur notre site, les chocolats sont alors fabriqués en début de semaine pour être <b>livrés en main propre ou point relais à partir du jeudi.</b>
+    </p>
+  </div>
+
+  <!-- <div style="width: 50%; left:50%; margin: auto;"> -->
+  <div class="chocImg">
+    <img class="centered" src="img/Ballotin-ouvert-s (1).png"/>
+  </div>
+
+  <br /><br />
+
+
+
+  <div>
+
+    <h3 text-uppercase text-center secondary style="font-size: 1.2em;">4 étapes pour en profiter</h3>
+    <br />
+
+    <button ion-item *ngFor="let etape of etapes" style="margin:3px;"
+    (click)="goBoutique()">
+      <p>
+        <b text-uppercase>{{etape.titre}} :</b>
+      </p>
+      <p text-justify>{{etape.description}}</p>
+    </button>
+
+  </div>
+
+
+</ion-content>
